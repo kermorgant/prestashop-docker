@@ -1,4 +1,5 @@
-FROM prestashop/prestashop:1.7-7.1-apache
+# FROM prestashop/prestashop:1.7-7.1-apache
+FROM prestashop/base:7.1-apache
 
 RUN pecl install xdebug-2.6.0 \
     && echo "zend_extension=$(find /usr/local/lib/php/extensions/ -name xdebug.so)" > /usr/local/etc/php/conf.d/xdebug.ini \
